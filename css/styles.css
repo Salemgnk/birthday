@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+    color: lime;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.hacked-message {
+    margin-top: 50px;
+    font-size: 24px;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 0 red; }
+    20% { text-shadow: -2px 0 blue; }
+    40% { text-shadow: 2px 0 green; }
+    60% { text-shadow: -2px 0 yellow; }
+    100% { text-shadow: 2px 0 red; }
+}
+
+.loading-bar {
+    width: 80%;
+    background-color: #444;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 20px;
+    background-color: lime;
+    animation: load 3s forwards;
+}
+
+@keyframes load {
+    100% { width: 100%; }
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.photos img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid lime;
+    transition: transform 0.3s;
+}
+
+.photos img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.birthday-greeting {
+    margin-top: 30px;
+    font-size: 28px;
+    color: white;
+}
