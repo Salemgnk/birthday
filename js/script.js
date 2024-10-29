@@ -1,39 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const loadingTime = 3000; // Time for loading bar
-    const cascadeTime = 3000; // Time for cascade effect
-    const greetingDelay = loadingTime + cascadeTime;
+    const loadingTime = 5000; // Durée de la barre de chargement (5 secondes)
 
-    // Simulate loading
+    // Simuler le chargement
     setTimeout(() => {
-        document.querySelector('.hacked-message').style.display = 'none';
-        cascadeEffect();
+        document.querySelector('.loading-container').style.display = 'none';
+        showVideo();
     }, loadingTime);
 
-    function cascadeEffect() {
-        const greetingElement = document.querySelector('.birthday-greeting');
-        const characters = 'Accessing files...';
-        let displayText = '';
-        let i = 0;
-
-        const interval = setInterval(() => {
-            if (i < characters.length) {
-                displayText += characters.charAt(i);
-                greetingElement.querySelector('h2').textContent = displayText;
-                i++;
-            } else {
-                clearInterval(interval);
-                setTimeout(() => {
-                    greetingElement.style.display = 'block';
-                    animateImages();
-                }, 1000); // Delay before showing greeting
-            }
-        }, 100); // Speed of cascade effect
-    }
-
-    function animateImages() {
-        const images = document.querySelectorAll('.photos img');
-        images.forEach((img, index) => {
-            img.style.animation = `bounce 1 s forwards ${index * 0.2}s`;
-        });
+    // Fonction pour afficher la vidéo
+    function showVideo() {
+        const videoContainer = document.querySelector('.video-container');
+        videoContainer.style.display = 'block';
     }
 });
