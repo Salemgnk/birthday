@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => {
                 messageContainer.style.display = "none";
                 index++;
-                setTimeout(showMessage, 1500); 
+                setTimeout(showMessage, 2000); 
             }, 2000);
         } else {
             videoContainer.style.display = "block";
