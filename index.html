@@ -14,13 +14,22 @@
         </div>
     </div>
 
+    <div class="message-container" style="display: none;">
+        <h2 id="message"></h2>
+    </div>
+
     <div class="video-container" style="display: none;">
         <video id="video" controls>
             <source src="video.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la vidéo.
         </video>
         <a id="download-link" href="video.mp4" download>
-            <button>Télécharger la vidéo</button>
+            <button class="button">
+                <span class="texto">Télécharger la vidéo</span>
+                <svg class="mysvg" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 16l4-4m-4 4l-4-4m4 4V4m8 8a8 8 0 11-16 0 8 8 0 0116 0z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
         </a>
     </div>
 
